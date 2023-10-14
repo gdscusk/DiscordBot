@@ -20,6 +20,15 @@ class general(commands.Cog):
     async def status(self, ctx):
         await ctx.send("Bot status is online")
 
+    @commands.command()
+    # command to show bot commands
+    async def help(self, ctx):
+        await ctx.send("There are 3 commands:")
+        await ctx.send("1. '>help' => to show commands")
+        await ctx.send("2. '>status' => to check bot status")
+        await ctx.send("3. '>msg' => to send message to specific channel")
+        await ctx.send("make sure to use the prefix '>' before the command and type without the quotes")
+
     @commands.command(pass_context=True)
     # command to send message to specific channel
     async def msg(self, ctx, *, message=None):

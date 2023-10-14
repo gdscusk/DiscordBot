@@ -2,17 +2,20 @@ import discord
 from discord.ext import commands
 from command_list import general
 import asyncio
-from decouple import config
+# from decouple import config
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 # get bot token from .env
-bot_token = config('BOT_TOKEN')
+bot_token = os.getenv('BOT_TOKEN')
 
 # honorofic commands
 intents = discord.Intents.default()
 intents.message_content = True
 
 # bot prefix
-client = commands.Bot(command_prefix='!', intents=intents)
+client = commands.Bot(command_prefix='>', intents=intents)
 
 # remove default help command
 client.remove_command('help')
@@ -31,4 +34,4 @@ async def setup():
 asyncio.run(setup())
 
 # bot token
-client.run(bot_token) # type: ignore
+client.run(bot_token)  # type: ignore

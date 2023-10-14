@@ -4,7 +4,7 @@ A simple Discord bot used to assist on Discord Servers
 
 ## Requirements
 
-You need to have the following installed on your system:
+You need to have the following installed on your system:  
 [Python3](https://www.python.org/downloads/)
 [Discord.py](https://pypi.org/project/discord.py/) >= 2.1.0
 [Python-decouple](https://pypi.org/project/python-decouple/) >= 3.7
